@@ -1,8 +1,16 @@
 public class PallendromCheckerApp {
     public static void main(String[] var0) {
-      System.out.println("=== Palindrome Checker App ===");
-      System.out.println("Version 1.0 - Complete Implementation");
-      System.out.println("Welcome Message");
+    
+        String input ="madam";
+        System.out.println("Is it palindrome? "+checkByHalfLoop(input));
    }
+    public static boolean checkByHalfLoop(String input) {
+        for (int i = 0; i < input.length() / 2; i++) {
+            if (input.charAt(i) != input.charAt(input.length() - 1 - i)) {
+                return false;
+            }
+        }
+        return true;
+    }
     
 }
